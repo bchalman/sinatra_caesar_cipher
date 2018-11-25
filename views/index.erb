@@ -8,12 +8,16 @@
       <h2>Caesar Cipher</h2>
     </header>
     <form>
-      <lable>String:</label>
-      <input type='text' name='string' />
-      <br>
-      <lable>Shift factor:</label>
-      <input type='text' name='shift' />
+      <lable>String:</label>              <br>
+      <input type='text' name='string' /> <br>
+      <lable>Shift factor:</label>        <br>
+      <input type='text' name='shift' />  <br><br>
       <input type='submit' value='Convert!' />
     </form>
+    <br>
+    <%unless cipher == "" %>
+      <p>Cipher:</p>
+      <p><%= cipher %></p>
+    <%end%>
   </body>
 </html>

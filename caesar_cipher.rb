@@ -4,9 +4,15 @@ enable :sessions
 
 
 get '/' do
+  converted_string = ""
 
-  erb :index
+  if params["string"] && params["shift"]
+    string = params["string"]
+    shift = params["shift"].to_i
+    converted_string = caesar_cipher(string, shift)
+  end
 
+  erb :index, :locals => {:cipher => converted_string}
 end
 
 def caesar_cipher (string, shift)
