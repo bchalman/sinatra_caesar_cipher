@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Caesar Cipher</title>
-  </head>
-  <body>
-    <header>
-      <h2>Caesar Cipher</h2>
-    </header>
-    <form>
-      <lable>String:</label>              <br>
-      <input type='text' name='string' /> <br>
-      <lable>Shift factor:</label>        <br>
-      <input type='text' name='shift' />  <br><br>
-      <input type='submit' value='Convert!' />
-    </form>
-    <br>
-    <%unless cipher == "" %>
-      <p>Cipher:</p>
-      <p><%= cipher %></p>
-    <%end%>
-  </body>
-</html>
+<form action="/convert", method="post">
+  <lable>String:</label>              <br>
+  <input type='text' name='string' /> <br>
+  <lable>Shift factor:</label>        <br>
+  <input type='text' name='shift' />  <br><br>
+  <input type='submit' value='Convert!' />
+</form>
